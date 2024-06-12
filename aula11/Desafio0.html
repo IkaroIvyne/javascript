@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StrangerThings</title>
+</head>
+
+<style>
+    #res {
+        padding-top: 200px;
+        font-weight:bolder;
+    }
+
+</style>
+
+<body>
+    <h1>Validação Europeia</h1>
+
+    <strong>Em que pais você nasceu?</strong> <input type="text" name="nation" id="ination">
+    <input type="button" value="Validar" onclick="validar()">
+    <div id="res">Resultado:</div>
+
+    <script>
+        
+            
+        function validar() {
+            var nation = window.document.getElementById('ination');
+            var res = document.getElementById('res');
+            var br = ination.value;
+            res.innerHTML = `Você é: `;
+            if (br === 'Brasil') {
+                res.innerHTML += `Brasileiro!`
+            } else {
+                res.innerHTML += `Estrangeiro!`
+            }
+        }
+    </script>
+
+</body>
+</html>
